@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset ="utf-8">
+<title>CakeAlicious</title>
+<link href="style.css" rel="stylesheet" type="text/css" >
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+<link rel="stylesheet" href="universal-parallax-master/dist/universal-parallax.css">
+<script src="universal-parallax-master/dist/universal-parallax.js"></script>
+
+</head>
+
+
+<body>
+<div id="nav1">
+  <h1><a href="index.html">CakeAlicious</a></h1>
+  <ul>
+       <li><a href="index.html">Home</a></li>
+       <li><a href="flavours.html">Flavours</a></li>
+       <li><a href="aboutus.html">About Us</a></li>
+       <li><a href="contact.html">Contact Us</a></li>
+	   <li><a href="pricing.html">Price</a></li>
+	   
+  </ul>
+</div>
+
+<div id="about">
+<div id="txt">
+<h1>CakeAlicious</h1>
+<p>WE DON'T MAKE CAKES-WE MAKE DREAMS COME TRUE.
+<br>
+<br>
+WE ARE BEST IN PRICES
+<br>
+<br>
+When his dream of slaying on the guitar in a rock band wasn't paying the bills, Chef Duff Goldman turned to his talents as a classically 
+trained pastry chef and metal craftsman and founded Charm City Cakes in Baltimore, MD in 2002.
+ Duff and his intrepid team of cake decorators churned out cakes the world had never seen before: cakes with sound, cakes
+ with smoke, cakes with motorized moving components, life-sized baby elephant cakes- no cake was too crazy to tackle.
+<br>
+It wasn't long before Charm City Cakes caught the eye of the Food Network where the hit reality cake decorating series Ace of Cakes was born. 
+Our Dublin Bakery (founded in 2011) have had the pleasure of making our awesome clients' cake dreams come true for over a decade now!
+<br>
+Our cakes have taken us everywhere from Dublin to the Inauguration of all major organizations, big wedding events and other grand celebration parties.
+<br>
+We hope you'll get in touch with us soon. You could be our next and greatest adventure! If you can dream it, we can create it!
+
+ </p>
+ </div>
+ <br>
+ <div class="slideshow-container">
+
+<div class="mySlides fade">  
+  <img src="assets/birthday1.jpg" alt="" style="width:90%;height:400px;"> 
+</div>
+
+<div class="mySlides fade"> 
+  <img src="assets/wedding1.JPG" alt="" style="width:90%;height:400px;">  
+</div>
+
+<div class="mySlides fade">  
+  <img src="assets/beautiful.JPG" alt="" style="width:90%;height:400px;"> 
+</div>
+
+</div>
+ <br>
+
+</div>
+<div id="footer">
+<h2>&copy; Allrights Reserved</h2>
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");   
+    for (i = 0; i < slides.length; i++)
+	   {
+       slides[i].style.display = "none";  
+       }
+
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}     
+    slides[slideIndex-1].style.display = "block";   
+    setTimeout(showSlides, 4000);
+}
+</script>
+</div>
+</body>
+</html>

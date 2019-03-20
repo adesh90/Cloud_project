@@ -1,0 +1,114 @@
+.home-section {
+    margin-top: 70px;
+}
+
+.login {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background: url('../assets/login.svg') no-repeat center;
+    background-size: cover;
+    vertical-align: middle;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.flavour-container {
+    position: relative;
+    height: 500px;
+    background-color: #019F52;
+    background-size: cover;
+    position: relative;
+}
+.seperator {
+    width: 100%;
+    height: 20px;
+}
+
+.seperator.white {
+    background-color: #fff;
+}
+.flavours-bg {
+    background: url(../assets/green-special.png) no-repeat center;
+    width: 570px;
+    height: 500px;
+    display: inline-block;
+    background-size: 264%;
+    background-position-x: 0;
+    background-position-y: 0;
+}
+
+.specials-content {
+    width: 480px;
+    position: absolute;
+    right: 180px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+}
+.about-us__title {
+    font-size: 40px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.about-us__subtitle {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 33px;
+    margin-top: 29px;
+}
+.celebrate-btn {
+    background: #ff485b;
+    padding: 14px 33px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 20px;
+    outline: none;
+    box-shadow: none;
+    border: 0;
+    border-radius: 3px;
+    position: relative;
+    display: inline-block;
+    border: 4px solid #fff;
+}
+
+.flavour-container-2 {
+    position: relative;
+    height: 500px;
+    background: url(../assets/SC-march-2017-banners-banana-chip-cake.jpg);
+    background-size: cover;
+}
+.specials-content-2 {
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    left: 100px;
+}
+.flavour-container-3 {
+    position: relative;
+    height: 500px;
+    background: url(../assets/SC-january-2017-banners-cherry-pie-e1545439654923.jpg);
+    background-size: cover;
+}
+.flavour-container-4 {
+    position: relative;
+    height: 500px;
+    background: url(../assets/SC-coconut-cream-e1550102416785.jpg);
+    background-size: cover;
+}
+.flavour-container-5 {
+    position: relative;
+    height: 500px;
+    background: url(../assets/SC-march-2017-banners-treat-tray.jpg);
+    background-size: cover;
+}
+
+
+.copyright {
+    padding: 20px 30px;
+    font-size: 20px;
+    text-align: right;
+}

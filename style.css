@@ -1,0 +1,209 @@
+body{
+	font-family: 'Lato', sans-serif;
+}
+
+*{
+   padding: 0px;
+   margin: 0px;
+   
+}
+#nav1{
+	width: 100%;
+	height: 70px;
+	line-height:70px;
+	background: #DF72DF;
+}
+#nav1 h1{
+	float: left;
+	font-size: 2.5em;
+	margin-left: 15px;
+}
+#nav1 h1 a{
+	text-decoration: none;
+	color: white;
+}
+#nav1 ul{
+	
+	float: right;
+	margin-right: 15px;
+}
+#nav1 ul li{
+	display: inline-block;
+	list-style-type: none;
+}
+#nav1 ul li a{
+	text-decoration: none;
+	color:white;
+	padding: 25px;
+}
+
+#nav1 ul li:hover{
+	background: #e2c4e2;
+	transition: all ease-in-out 0.25s;
+}
+#main-content{
+	width: 100%;
+	height: 600px;
+	background: url(baked.JPG) no-repeat;
+	background-size:cover;
+	text-align: center;
+	color: #6a086f;
+	line-height: 40px;
+}
+#flavours{
+	background: #e66adc;
+	width: 170px;
+	height: 60px;
+	line-height:60px;
+	margin-left: auto;
+	margin-right: auto;
+    border-radius: 5px;
+	color: white;
+	font-weight:100;
+}
+#flavours:hover{
+	box-shadow: 01px 05px 02px 02px;
+	transition: all ease-in-out 0.15s;
+}
+	
+#flavours a{
+	color: white;
+	text-decoration: none;
+	padding: 10px;
+}
+#third{
+		width: 100%
+		height: 400px;
+		background:white;
+}
+#third1{
+	width: 375px;
+	height:300px
+	padding: 5px;
+	display: inline;
+	float: left;
+	margin: 15px;
+	text-align: center;
+}
+#third1 img{
+	width:300px;
+	height: 200px;
+	border-radius: 5px;
+}
+#footer{
+	width: 100%;
+	height: 100px;
+	background: white;
+	line-height: 100px;
+}
+
+#second-page{
+	width: 100%;
+	height: 600px;
+	background: url(images/anniversary.JPG);
+	background-size:cover;
+	text-align: center;
+	color: #6a086f;
+	line-height: 30px;
+}
+#second-page h1{
+	color:Purple;
+	width: 400px;
+	height: 90px;
+	line-height: 50px;
+	text-align: left;
+	margin-left: 50px;
+}
+#second-page h3{
+	color:Purple;
+	width: 400px;
+	height: 90px;
+	line-height: 50px;
+	text-align: left;
+	margin-left: 50px;
+}
+#text{
+	color:Purple;
+	background:white;
+}
+#mainform{
+	width: 100%;
+	height: 500px;
+}
+#form{
+	width: 50%;
+	height: 500px;
+	background: #fdbafd;
+	color: white;
+	line-height:35px;
+	float:left;
+	padding-left: 100px;
+}
+#form{
+	margin-right: 100px;
+}
+#name{
+	width: 300px;
+	height: 30px;
+	padding:6px;
+	border-radius:5px;
+	border:1px solid #ccc;
+}
+#com{
+	width:300px;
+	height: 120px;
+	border-radius:5px;
+	padding:7px;
+}
+#sub{
+	width: 100px;
+	background: white;
+	border-radius:5px;
+	height: 50px;
+	border: 0px;
+	color: violet;
+	font-size:18px;
+}
+#extra{
+	width: 50%;
+	float: right;
+	text-align:center;
+	margin-top: 100px;
+}
+
+#about img{
+	width: 250px;
+	height: 250px;
+	border-radius:5px;
+	margin:20px;
+	
+}
+#txt{
+	background:white;
+	color:purple;
+	margin-left:auto;
+	margin-right:auto;
+}
+	
+#table {
+    width:100%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+#table tr:nth-child(even) {
+    background-color: violet;
+}
+#table tr:nth-child(odd) {
+   background-color: violet;
+}
+#table th {
+    background-color: violet;
+    color: white;
+}
+

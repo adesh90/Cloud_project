@@ -1,0 +1,89 @@
+
+.listing-container {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding-top: 50px;
+}
+
+.cakes-list {
+    list-style-type: none;
+    font-size: 0;
+    margin-top: 20px;
+    padding-top: 30px;
+    border-top: 1px solid #efefef 
+}
+
+.cakes-list__item {
+    width: 23%;
+    background: #fff;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid #efefef;
+    transition: transform .5s;
+    margin-left: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 4px 0 #b3b2b2;
+}
+
+.cakes-list__item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 4px 0 #484884;
+}
+
+.content-container {
+    padding: 10px;
+}
+
+.card__title {
+    font-size: 18px;
+    color: #484848;
+}
+
+.card__subtitle {
+    color: #6f6f6f;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.card__price {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    margin-top: 5px;
+}
+
+.buy__button {
+    padding: 10px 40px;
+    background-color: #ff485b;
+    color: #fff;
+    font-weight: 700;
+    margin-top: 8px;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 3px;
+}
+
+
+.listing-container__title {
+    font-size: 32px;
+    color: #484848;
+    font-weight: 700;
+}
+
+.listing-container__subtitle {
+    font-size: 20px;
+    color: #484848;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.listing-container__additional-text {
+    font-size: 20px;
+    color: #484848;
+    font-weight: 400;
+    margin-top: 10px;
+    width: 70%;
+}
+
