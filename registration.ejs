@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <% include ../partials/header %>
+<body>
+    <% include ../partials/navBar %>
+    <div class="login-form">
+        <label class="form-input-container form-input__username">
+                <span class="form-input__label">User Name</span>
+                <input class="form-input__field" type="text" size="20" placeholder="Enter user name" id="userName">
+                <span class="form-input__error">
+                    Please enter valid username
+                </span>
+        </label>
+        <label class="form-input-container form-input__email">
+                <span class="form-input__label">email</span>
+                <input class="form-input__field" type="email" size="20" placeholder="Enter email address" id="email">
+                <span class="form-input__error">
+                    Please enter valid email address
+                </span>
+        </label>
+        <label class="form-input-container form-input__password">
+                <span class="form-input__label">Password</span>
+                <input class="form-input__field" type="password" size="20" placeholder="Atleast 8 chars" id="pwd">
+                <span class="form-input__error">
+                    Please enter atleast 8 chars
+                </span>
+        </label>
+        <label class="form-input-container form-input__address">
+            <span class="form-input__label">Address</span>
+            <input class="form-input__field" type="text" size="20" placeholder="Enter last name" id="address">
+            <span class="form-input__error">
+                    Please enter valid last name
+            </span>
+        </label>
+        <label class="form-input-container form-input__contact">
+            <span class="form-input__label">contact</span>
+            <input class="form-input__field" type="input" size="20" placeholder="Enter last name" id="contact">
+            <span class="form-input__error">
+                    Please enter valid last name
+            </span>
+        </label>
+        <div class="form-button-container">
+            <input class="btn btn-orange" type="button" value="Register" id="registrationSubmit">
+        </div>
+    </div>
+    <% include ../partials/footer %>
+</body>
+<script>
+    $(document).ready(function(){
+        var email, pwd, firstName, lastName;
+        var emailContainer, pwdContainer, userNameContainer, contactContainer, addressContainer;
+        
+        var isEmailValid, isPasswordValid, isLastNameValid, isFirstNameValid;
+        var emailReg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        var contactRegex = /[0-9]{10}/gm;
+
+        emailContainer = $('.form-input__email');
+        pwdContainer = $('.form-input__password');
+        userNameContainer = $('.form-input__username');
+        contactContainer  = $('.form-input__contact');
+        addressContainer = $('.form-input__address');
+
+        $("#registrationSubmit").click(function(){
+            email=$("#email").val();
+            password=$("#pwd").val();
+            username= $('#userName').val();
+            contact=$("#contact").val();
+            address=$("#address").val();
+            
+            isEmailValid= emailReg.test(email);
+            isPasswordValid = password.length > 8;
+            isUserNameValid = username.length;
+            iscontactValid = contactRegex.test(contact);
+            isAddressVaid = address.length
+ 
+            if(isEmailValid && isPasswordValid && isUserNameValid && iscontactValid && isAddressVaid) {
+                let info = {
+                    email:email,
+                    password:password,
+                    username: username,
+                    contact: contact,
+                    address: address
+                }
+
+                $.post("http://localhost:9001/registerUser", {...info}, function(data) {        
+                    if(data==='done')           
+                    {
+                        window.location.href="/home";
+                    }
+                });
+            }
+            else {
+                (!isEmailValid) ? emailContainer.addClass('error'): emailContainer.removeClass('error');
+                (!isPasswordValid) ? pwdContainer.addClass('error'): pwdContainer.removeClass('error');
+                (!isUserNameValid) ? userNameContainer.addClass('error'): userNameContainer.removeClass('error');
+                (!iscontactValid) ? contactContainer.addClass('error'): contactContainer.removeClass('error');
+                (!isAddressVaid) ? addressContainer.addClass('error'): addressContainer.removeClass('error');
+            }
+        });
+    });
+    </script>
+</html>
