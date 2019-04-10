@@ -1,0 +1,24 @@
+<div class="payment-detail-popup" role="navigation">
+    <div class="payment-detail__container">
+        <%= data %>
+        <div>
+            transaction id: <%=data.id%>
+        </div>
+        <% var transactionInfo = data.transactions[0]; %>
+        <% var itemList = transactionInfo.item_list.items[0]; %>
+        <% var shipping_address = transactionInfo.item_list.shipping_address; %>
+
+        <div>
+            amount: <%=transactionInfo.amount.total%>
+        </div>
+        <div>
+            merchant id: <%=transactionInfo.payee.merchant_id%>
+        </div>
+        <div>
+            pay email id: <%=transactionInfo.payee.email%>
+        </div>
+
+        <div> <%=itemlist %></div>
+        <div> <%=shipping_address%></div>
+    </div>
+</div>
