@@ -1,0 +1,221 @@
+
+
+.login {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background: url('../images/login.svg') no-repeat center;
+    background-size: cover;
+    vertical-align: middle;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.home-container {
+    height: 474px;
+    background: url('../images/cupcake.jpg') no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%,-50%);
+    background: url('../images/logo.png') no-repeat center;
+    background-size: cover;
+}
+
+.home-text {
+    color: #6c3f21;
+    font-size: 21px;
+    line-height: 29px;
+    letter-spacing: 1px;
+}
+
+.home-section {
+    position: relative;
+}
+
+.home-text-wrapper {
+    background: rgba(255,255,255,.9);
+    width: 334px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: inline-block;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 60px;
+}
+
+.logo-text {
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 1px;
+    color: #6c3f21;
+    line-height: 25px;
+    font-weight: 700;
+}
+
+.logo-text.one {
+    position: absolute;
+    right: 7%;
+    top: 20%;
+}
+
+.logo-text.two {
+    position: absolute;
+    right: 8%;
+    bottom: 20%;
+}
+
+.seperator {
+    width: 100%;
+    height: 20px;
+}
+
+.seperator.white {
+    background-color: #fff;
+}
+
+.scalloped-edge {
+    background: url('../images/scallop-large.png') repeat-x bottom center;
+    height: 33px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.scalloped-edge-inverse {
+    background: url('../images/scallop-large.png') repeat-x bottom center;
+    height: 33px;
+    position: absolute;
+    bottom: -32px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transform: rotate(180deg);
+}
+.about-us-container {
+    height: 389px;
+    color: #6c3f21;
+    position: relative;
+    background-color: #fff;
+    background-size: cover;
+}
+
+.about-us-content,
+.specials-content {
+    width: 480px;
+    position: absolute;
+    right: 90px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.about-us__title {
+    font-size: 40px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.about-us__subtitle {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 33px;
+    margin-top: 29px;
+}
+
+.about-us-bg {
+    width: 400px;
+    height: 240px;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    left: 150px;
+    overflow: hidden;
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid #3fbfff;
+    background: #d6ecf8;
+    border-radius: 10px;
+}
+
+.special-content-container {
+    height: 350px;
+    background: green;
+    position: relative;
+    color: #fff;
+    margin-top: 15px;
+}
+
+.specials-bg {
+    background: url('../images/green-special.png') no-repeat center;
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+    background-size: 264%;
+    background-position-x: 0;
+    background-position-y: 0;
+}
+
+.specials-content {
+    right: 120px;
+}
+
+.celebrate-section-container {
+    color: #6c3f21;
+    height: 400px;
+    background: url('../images/celebrate.jpg') no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+.celebrate__title {
+    font-size: 40px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.celebrate__subtitle {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 33px;
+    margin-top: 29px;
+}
+
+.celebrate-contents {
+    width: 480px;
+    position: absolute;
+    left: 90px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.celebrate-btn {
+    background: #ff485b;
+    padding: 14px 30px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 20px;
+    outline: none;
+    box-shadow: none;
+    border: 0;
+    border-radius: 3px;
+    position: relative;
+    display: inline-block;
+    border: 2px solid #fff;
+}
+
+.sm {
+    margin: 0 auto;
+    display: block !important;
+}
