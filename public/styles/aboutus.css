@@ -1,0 +1,56 @@
+.home-section, .team-section {
+    position: relative;
+}
+.header-image {
+    background-image: url(../images/rainbow_cake.jpg);
+    width: 100%;    
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -130px;
+}
+.header-content {
+    position: absolute;
+    width: 520px;
+    top: 50%;
+    right: 180px;
+    transform: translateY(-50%);
+}
+.header-text {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.header-text1 {
+    font-size: 28px;
+    text-align: center;
+}
+.main-section {
+    position: relative;
+    padding: 60px 250px;
+    height: 250px;
+}
+.main-text {
+    font-size: 20px;
+    color: #484848;
+    line-height: 40px;
+    text-align: center;
+}
+.team-section {
+    background: #D9E2E9;
+}
+.team-image {
+    background: url(../images/celebrate.jpg);
+    height: 500px;
+    background-size: cover;
+}
+.team-content {
+    width: 580px;
+    position: absolute;
+    left: 90px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c3f21;
+    font-size: 20px;
+    line-height: 40px;
+}

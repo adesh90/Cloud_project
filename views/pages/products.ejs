@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html>
+    <% include ../partials/header %>
+<body>
+    <% include ../partials/navBar %>
+    <% if(!isLoggedIn) {%>
+    <div class="login-prompt active">
+        <div class="overlay-window "></div>
+        <div class="login-prompt-container">
+            <div class="overlay-window-inner"></div>
+            <div class="login-propmt__form">
+                <h3 class="login-prompt__title">The Cakery</h3>
+                <p class="login-prompt__subtitle">To buy and enjoy our delecious servings please help us recognize you!!!</p>
+                <a href="/login" class="celebrate-btn">Login</a>
+            </div>
+        </div>
+    </div>
+    <% } %>
+    <div class="product-switch">
+        <ul class="product-switch-list">
+            <li class="product-switch-list__item active" data-tab="regularTab">Regular</li>
+            <li class="product-switch-list__item" data-tab="exoticTab">Exotic</li>
+        </ul>
+    </div>
+    <div class="listing-container">
+        <div class="exotic-tab tab-container" id="exoticTab">
+            <h2 class="listing-container__title">The Cakery : Exotic</h2>
+            <p class="listing-container__subtitle">"Yes those amazing cakes you see on TV, really can taste as Good as they look"</p>
+            <p class="listing-container__additional-text">The Cakery :Exotic is a range of premium cakes made with love and pure ingridients with special mixtures and blends of flavours one can't resist.</p>
+            <ul class="cakes-list">
+                <li id="c1" class="cakes-list__item" data-prod-id="001">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images//cakes/1.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+
+                            <p class="card__price">$25</p>
+
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+
+                <li id="c2" class="cakes-list__item" data-prod-id="002">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images//cakes/2.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+
+                            <p class="card__price">$25</p>
+
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+
+                <li id="c3" class="cakes-list__item" data-prod-id="003">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images//cakes/3.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+
+                            <p class="card__price">$25</p>
+
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+
+                <li id="c4" class="cakes-list__item" data-prod-id="004">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images//cakes/4.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+
+                            <p class="card__price">$25</p>
+
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+
+                <li id="c5" class="cakes-list__item" data-prod-id="005">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images//cakes/5.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+
+                            <p class="card__price">$25</p>
+
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+
+                <li id="c6" class="cakes-list__item" data-prod-id="006">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images//cakes/6.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+
+                            <p class="card__price">$25</p>
+
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+
+                <li id="c7" class="cakes-list__item" data-prod-id="007">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images//cakes/7.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+
+                            <p class="card__price">$25</p>
+
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+
+                <li id="c8" class="cakes-list__item" data-prod-id="008">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images//cakes/8.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+
+                            <p class="card__price">$25</p>
+
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+
+                <li id="c9" class="cakes-list__item" data-prod-id="009">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images//cakes/9.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+
+                            <p class="card__price">$25</p>
+
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+
+                <li id="c10" class="cakes-list__item" data-prod-id="010">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images//cakes/10.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+
+                            <p class="card__price">$25</p>
+
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+
+                <li id="c11" class="cakes-list__item" data-prod-id="011">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images//cakes/11.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+
+                            <p class="card__price">$25</p>
+
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+
+                <li id="c12" class="cakes-list__item" data-prod-id="012">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images//cakes/12.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+
+                            <p class="card__price">$25</p>
+
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+
+                <li id="c13" class="cakes-list__item" data-prod-id="013">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images//cakes/13.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+
+                            <p class="card__price">$25</p>
+
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+
+                <li id="c14" class="cakes-list__item" data-prod-id="014">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images//cakes/14.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+
+                            <p class="card__price">$25</p>
+
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+
+                <li id="c15" class="cakes-list__item" data-prod-id="015">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images//cakes/15.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+
+                            <p class="card__price">$25</p>
+
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="regular-tab tab-container active" id="regularTab">
+            <h2 class="listing-container__title">The Cakery : Regular</h2>
+            <p class="listing-container__subtitle">"Yes those amazing cakes you see on TV, really can taste as Good as they look"</p>
+            <p class="listing-container__additional-text">The Cakery :Exotic is a range of premium cakes made with love and pure ingridients with special mixtures and blends of flavours one can't resist.</p>
+            <ul class="cakes-list">
+                <li id="c16"class="cakes-list__item" data-prod-id="016">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images/cakes/n1.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+    
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+    
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+    
+                            <p class="card__price">$25</p>
+    
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+    
+                <li id="c17"class="cakes-list__item" data-prod-id="017">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images/cakes/n2.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+    
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+    
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+    
+                            <p class="card__price">$25</p>
+    
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+    
+                <li id="c18"class="cakes-list__item" data-prod-id="018">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images/cakes/n3.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+    
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+    
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+    
+                            <p class="card__price">$25</p>
+    
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+    
+                <li id="c19"class="cakes-list__item" data-prod-id="019">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images/cakes/n4.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+    
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+    
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+    
+                            <p class="card__price">$25</p>
+    
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+    
+                <li id="c20"class="cakes-list__item" data-prod-id="020">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images/cakes/n5.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+    
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+    
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+    
+                            <p class="card__price">$25</p>
+    
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+    
+                <li id="c21"class="cakes-list__item" data-prod-id="021">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images/cakes/n6.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+    
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+    
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+    
+                            <p class="card__price">$25</p>
+    
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+    
+                <li id="c22"class="cakes-list__item" data-prod-id="022">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images/cakes/n7.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+    
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+    
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+    
+                            <p class="card__price">$25</p>
+    
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+    
+                <li id="c23"class="cakes-list__item" data-prod-id="023">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images/cakes/n8.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+    
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+    
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+    
+                            <p class="card__price">$25</p>
+    
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+    
+                <li id="c24"class="cakes-list__item" data-prod-id="024">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images/cakes/n9.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+    
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+    
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+    
+                            <p class="card__price">$25</p>
+    
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+    
+                <li id="c25"class="cakes-list__item" data-prod-id="025">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images/cakes/n10.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+    
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+    
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+    
+                            <p class="card__price">$25</p>
+    
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+    
+                <li id="c26"class="cakes-list__item" data-prod-id="026">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images/cakes/n11.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+    
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+    
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+    
+                            <p class="card__price">$25</p>
+    
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+    
+                <li id="c27"class="cakes-list__item" data-prod-id="027">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images/cakes/n12.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+    
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+    
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+    
+                            <p class="card__price">$25</p>
+    
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+    
+                <li id="c28"class="cakes-list__item" data-prod-id="028">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images/cakes/n13.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+    
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+    
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+    
+                            <p class="card__price">$25</p>
+    
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+    
+                <li id="c29"class="cakes-list__item" data-prod-id="029">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images/cakes/n14.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+    
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+    
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+    
+                            <p class="card__price">$25</p>
+    
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+    
+                <li id="c30"class="cakes-list__item" data-prod-id="030">
+                    <div class="card">
+                        <div class="media-container">
+                            <img
+                                src="/images/cakes/n15.webp"
+                                alt="cakes"
+                                width="100%"
+                                height="200;"
+                            >
+                        </div>
+    
+                        <div class="content-container">
+                            <p class="card__title">Sprinkled Vanilla Joy</p>
+    
+                            <p class="card__subtitle">Earliest Delivery: Today</p>
+    
+                            <p class="card__price">$25</p>
+    
+                            <input
+                                type="button"
+                                value="Buy"
+                                class="buy__button"
+                            />
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="paymentGateway" class="payment-popup">
+        <div class="blackout-window"></div>
+        <div class="product-payment-container">
+            <p class="product-payment__text">
+                Please select quantity
+            </p>
+            <div class="payment-input-container">
+                <span class="payment-input-counter payment-input_dec-counter">
+                    -
+                </span>
+                <input id="paymentGatewayInput" value="1" type="number" maxlength="3"/>
+                <span class="payment-input-counter payment-input_inc-counter">
+                    +
+                </span>
+            </div>
+            <input
+                type="button"
+                value="pay"
+                id="paymentGatewayButton"
+            />
+        </div>
+    </div>
+    <% include ../partials/footer %>
+    <script>
+        $(document).ready(function(){
+            var purchaseLink, paymentGatewayPopup, blackoutWindow, inputCounter, paymentGatewayInput, paymentGatewayButton;
+
+            purchaseLink = $('.buy__button');
+            paymentGatewayPopup = $('#paymentGateway');
+            blackoutWindow=$('#paymentGateway .blackout-window');
+            inputCounter = $('.payment-input-counter');
+            paymentGatewayInput = $('#paymentGatewayInput');
+            paymentGatewayButton = $('#paymentGatewayButton');
+
+            purchaseLink.on('click', function(event) {
+                paymentGatewayPopup.addClass('active');
+                paymentGatewayPopup.attr('data-id', $(this).closest('.cakes-list__item').attr('id'))
+            });
+
+            blackoutWindow.on('click', function() {
+                paymentGatewayPopup.removeClass('active');
+                paymentGatewayInput.val(1)
+            })
+
+            inputCounter.on('click', function (event) {
+                var inputValue = Number(paymentGatewayInput.val());
+                inputValue = $(this).hasClass('payment-input_inc-counter')? inputValue + 1: inputValue -1;
+                paymentGatewayInput.val(inputValue)
+            })
+            
+
+            paymentGatewayButton.on('click', function() {
+                const prodContainerId = paymentGatewayPopup.attr('data-id')
+                const productContainer = $('#'+prodContainerId);
+                const prodId = productContainer.attr('data-prod-id')
+                const prodName = productContainer.find('.card__title').text();
+                const prodPrice = productContainer.find('.card__price').text().substring(1);
+                const prodQuantity = Number(paymentGatewayInput.val());
+                const prodDetail = {
+                    prodId: prodId,
+                    prodName: prodName,
+                    prodPrice: prodPrice,
+                    prodQuantity: prodQuantity
+                }
+                post_to_url("http://localhost:9001/pay", { prodId: prodId, prodName: prodName, prodPrice:prodPrice, prodQuantity: prodQuantity } );
+
+            })
+        });
+
+        function post_to_url(path, params, method) {
+            method = method || "post";
+            console.log(params);
+            var form = document.createElement("form");
+
+            //Move the submit function to another variable
+            //so that it doesn't get overwritten.
+            form._submit_function_ = form.submit;
+
+            form.setAttribute("method", method);
+            form.setAttribute("action", path);
+
+            for(var key in params) {
+                var hiddenField = document.createElement("input");
+                hiddenField.setAttribute("type", "hidden");
+                hiddenField.setAttribute("name", key);
+                hiddenField.setAttribute("value", params[key]);
+
+                form.appendChild(hiddenField);
+            }
+
+            document.body.appendChild(form);
+            form._submit_function_(); //Call the renamed function.
+        }
+        </script>
+</body>
+</html>

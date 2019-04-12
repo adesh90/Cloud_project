@@ -1,0 +1,38 @@
+<nav class="navbar" role="navigation">
+        <% var abc = title %>
+        <% var navItem = {'Home': 'home',
+                          'Products': 'products',
+                          'Specials': 'specials',
+                          'About Us' : 'about_us',
+                          'Find Us Here': 'find_us'
+                        } %>
+        <div class="navbar-content" id="nav1">
+            <h1><%= title %></h1>
+            <ul class="nav-list">
+                    <% Object.keys(navItem).forEach((key) => { %>
+                        <li class="nav-list__item<%= (key == title) ? ' nav-list--active' : '' %>">
+                            <a href=<%="/"+navItem[key] %>><%= key %></a>
+                        </li>
+                    <% }) %>
+                    <% if(!isLoggedIn) { %>
+                        <li class="nav-list__item<%= ('Login Form' == title) ? ' nav-list--active' : '' %>">
+                            <a href="/login">login</a>
+                        </li>
+                        <li class="nav-list__item<%= ('Registration Form' == title) ? ' nav-list--active' : '' %>">
+                                <a href="/register">register</a>
+                        </li>
+                    <% } else { %>
+                        <li class="nav-list__item<%= ('Summary' == title) ? ' nav-list--active' : '' %>">
+                                <a href="/summary">summary</a>
+                            </li>
+                        <li class="nav-list__item<%= ('logout Form' == title) ? ' nav-list--active' : '' %>">
+                            <a href="/logout">logout</a>
+                        </li>
+                    <% } %>
+            </ul>
+            <ul>
+
+                </ul>
+                
+        </div>
+</nav>

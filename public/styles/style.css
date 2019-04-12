@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.login-form {
+    margin: 40px auto;
+    width: 30%;
+}
+.form-input-container {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-input-container.error .form-input__error {
+    opacity: 1;
+}
+
+.form-input-container.error .form-input__field {
+    border-color: red;
+}
+.form-input__label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #787878;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.form-input__field {
+    display: block;
+    padding: 10px;
+    display: block;
+    border-radius: 4px;
+    border: 1px solid #e2e2e2;
+    width: 100%;
+}
+
+.form-input__error {
+    display:  block;
+    margin-top: 5px;
+    color: tomato;
+    font-size: 12px;
+    opacity: 0;
+}
+
+.form-button-container {
+    width: 100%;
+}
+
+.btn {
+    padding:  8px 15px;
+    border: 1px solid transparent;
+    font-weight: 600;
+    font-size: 16px;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn.btn-orange {
+    border-color: red;
+    color: red;
+    background-color: #fff;
+}
+
+.btn.btn-orange:hover {
+    color: #fff;
+    background-color: red;   
+}
+
+/* navigation bar */
+
+.nav-list {
+    display: block;
+}
+
+.nav-list__item {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nav-list__item > a {
+    text-decoration: none;
+}
+
+.redirect-register {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.redirect-register a {
+    color: #3fbfff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* SUMMARY */
+.summary-content {
+    width: 996px;
+    margin: 20px auto;
+    list-style-type: none;
+}
+
+.summary-content li {
+    width: 45%;
+    border: 1px solid #6f6f6f;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.summary-content li div {
+    font-size: 16px;
+    color: #484848;
+    letter-spacing: 1.01px;
+    line-height: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.summary-content li div::first-letter {
+    text-transform: uppercase;
+}
+
+.summary-heading {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+.summary-subheading {
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 700;
+}

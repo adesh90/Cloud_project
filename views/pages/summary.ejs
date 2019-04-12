@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <% include ../partials/header %>
+<body>
+    <% include ../partials/navBar %>
+
+    <% var transactionData = data %>
+    <div class="summary-heading">Summary</div>
+    <p class="summary-subheading">List of cakes you ordered till now</p>
+    <ul class="summary-content">
+        <% for(var i=0; i<transactionData.length; i++) { %>
+            <li>
+                <div>
+                    username: <%=  transactionData[i].username %>
+                </div>
+                <div>
+                    email: <%= transactionData[i].email  %>
+                </div>
+                <div>
+                    cakename: <%= transactionData[i].cakename %>
+                </div>
+                <div>
+                    time: <%=  transactionData[i].time %>
+                </div>
+                <div>
+                    address: <%=  transactionData[i].address %>
+                </div>
+                <div>
+                    quantity: <%= transactionData[i].quantity  %>
+                </div>
+                <div>
+                    cost per unit: <%= transactionData[i].cost / transactionData[i].quantity  %>
+                </div>
+                <div>
+                    total cost: <%= transactionData[i].cost  %>
+                </div>
+            </li>
+        <%} %>
+    </ul>
+    <% include ../partials/footer %>
+</body>
+</html>

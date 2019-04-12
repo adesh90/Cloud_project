@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <% include ../partials/header %>
+<body>
+    <% include ../partials/navBar %>
+    <div class="login-form">
+        <label class="form-input-container form-input__email">
+            <span class="form-input__label">email address</span>
+            <input class="form-input__field" type="email" placeholder="Please enter your emmail address" id="loginEmail">
+            <span class="form-input__error">
+                Please enter valid email address
+            </span>
+        </label>
+        <label class="form-input-container form-input__password">
+            <span class="form-input__label">Password</span>
+            <input class="form-input__field" type="password" size="20" placeholder="Atleast 8 chars" id="loginPwd">
+            <span class="form-input__error">
+                Please enter atleast 8 chars
+            </span>
+        </label>
+        <div class="form-button-container">
+            <input class="celebrate-btn" type="button" value="Submit" id="loginSubmit">
+        </div>
+        <div class="redirect-register">
+            <a href="/register">Dont have an account? Register Now!!!</a>
+        </div>
+    </div>
+    <% include ../partials/footer %>
+</body>
+<script>
+    $(document).ready(function(){
+        var email,pwd,emailContainer, pwdContainer;
+        var isEmailValid, isPasswordValid;
+        var emailReg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+        emailContainer = $('.form-input__email');
+        pwdContainer = $('.form-input__password');
+
+        $("#loginSubmit").click(function(){
+            email=$("#loginEmail").val();
+            password=$("#loginPwd").val();
+
+            isEmailValid= emailReg.test(email)
+            isPasswordValid = password.length > 8
+            if(isEmailValid && isPasswordValid) {
+                let info = {
+                    email:email,
+                    password:password
+                }
+
+                $.post("http://localhost:9001/validateLogin", {...info}, function(data) {        
+                    if(data==='done')           
+                    {
+                        window.location.href="/home";
+                    }
+                });
+            }
+            else {
+                (!isEmailValid) ? emailContainer.addClass('error'): emailContainer.removeClass('error');
+                (!isPasswordValid) ? pwdContainer.addClass('error'): pwdContainer.removeClass('error');
+            }
+
+        });
+    });
+    </script>
+</html>

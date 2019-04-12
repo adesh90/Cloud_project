@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<% include ../partials/header %>
+
+    <body>
+        <% include ../partials/navBar %>
+            <section class="home-section">
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe width="768" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=dublin%20school%20of%20business&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        <a href="https://www.crocothemes.net"></a>
+                    </div>
+                    <style>
+                        .mapouter {
+                            position: relative;
+                            text-align: right;
+                            height: 500px;
+                            width: 768px;
+                            border: 1px solid #000000;
+                            margin: 20px;
+                            overflow: hidden;
+                            border-radius: 5px;
+                            display: inline-block;
+                        }
+
+                        .gmap_canvas {
+                            overflow: hidden;
+                            background: none !important;
+                            height: 500px;
+                            width: 768px;
+                        }
+                    </style>
+                </div>
+                <div class="header-content-1">
+                    <h1 class="header-text-1">Locate us at</h1>
+                    <h4 class="header-text-2">Carysfort Ave, Carrysfort, Blackrock, Co. Dublin, Ireland</h4>
+                    <p class="header-text-2">+353 1 716 8888</p>
+                </div>
+            </section>
+            <div class="feedback-area">
+                    <h1 class="feedback-text">We would like to hear from you!</h1>
+
+                <div class="feedback-section">
+                    
+                    <div>
+
+                        <label class="form-input-container form-input__feedusername">
+                            <span class="form-input__label">Name</span>
+                            <input class="form-input__field" type="text" size="20" placeholder="First Name" id="feedloginName">
+                            <span class="form-input__error">
+                                Please enter valid name
+                            </span>
+                        </label>
+                        <label class="form-input-container form-input__feedemail">
+                            <span class="form-input__label">Email</span>
+                            <input class="form-input__field" type="email" placeholder="Please enter your email address" id="feedloginEmail">
+                            <span class="form-input__error">
+                                Please enter valid email address
+                            </span>
+                        </label>
+                        <label class="form-input-container form-input__feedback">
+                            <span class="form-input__label">Feedback</span>
+                            <textarea class="form-input__field" placeholder="" id="feedBack" rows="5"></textarea>
+                            <span class="form-input__error">
+                                Please enter valid email address
+                            </span>
+                        </label>
+
+                        <div class="form-button-container">
+                            <input class="celebrate-btn" type="button" value="Submit" id="feedbackSubmit">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <% include ../partials/footer %>
+    </body>
+    <script>
+            $(document).ready(function(){
+                var name,email,emailContainer, nameContainer,feedback,feedbackContainer;
+                var isEmailValid, isNameValid, isFeedbackValid;
+                var emailReg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        
+                emailContainer = $('.form-input__feedemail');
+                nameContainer = $('.form-input__feedusername');
+                feedbackContainer = $('.form-input__feedback');
+        
+                $("#feedbackSubmit").click(function(){
+                    email=$("#feedloginEmail").val();
+                    name=$("#feedloginName").val();
+                    feedback=$('#feedBack').val();
+        
+                    isEmailValid= emailReg.test(email)
+                    isNameValid = name.length > 8;
+                    isFeedbackValid = feedback.length> 20; 
+                    if(isEmailValid && isNameValid && isFeedbackValid) {
+                        let info = {
+                            email:email,
+                            name:name,
+                            feedback:feedback
+                        }
+                        console.log(info);
+        
+                        $.post("http://localhost:9001/submitfeedback", {...info}, function(data) {        
+                            if(data==='done')           
+                            {
+                                window.location.href="/find_us";
+                                alert('FeedBack Submitted');
+                            }
+                        });
+                    }
+                    else {
+                        (!isEmailValid) ? emailContainer.addClass('error'): emailContainer.removeClass('error');
+                        (!isNameValid) ? nameContainer.addClass('error'): nameContainer.removeClass('error');
+                        (!isFeedbackValid) ? feedbackContainer.addClass('error'): feedbackContainer.removeClass('error');
+                    }
+        
+                });
+            });
+            </script>
+</html>
