@@ -81,9 +81,6 @@ app.get('/success', (req, res) => {
   const payerId = req.query.PayerID;
   const paymentId = req.query.paymentId;
 
-  // console.log('qurey', JSON.stringify(req.query));
-  // console.log('req.body', req);
-
   const execute_payment_json = {
       "payer_id": payerId,
       "transactions": [{
@@ -109,17 +106,14 @@ app.get('/success', (req, res) => {
         address += payerInfo.country_code;
 
           
-        connection.query('INSERT INTO `summary`(`username`, `cakename`, `time`, `address`, `quantity`, `cost`) VALUES ("'+ paymentDetail.payer.payer_info.shipping_address.recipient_name+'", "'+paymentDetail.transactions[0].item_list.items[0].name+'", "'+paymentDetail.create_time.substring(0, 10)+'", "'+ address +'", "'+paymentDetail.transactions[0].item_list.items[0].quantity+'", "'+paymentDetail.transactions[0].amount.total+'")', function (error, results, fields) {
+        connection.query('INSERT INTO `summary`(`username`, `email`, `cakename`, `time`, `address`, `quantity`, `cost`) VALUES ("'+ paymentDetail.payer.payer_info.shipping_address.recipient_name+'", "'+ses.email+'" ,"'+paymentDetail.transactions[0].item_list.items[0].name+'", "'+paymentDetail.create_time.substring(0, 10)+'", "'+ address +'", "'+paymentDetail.transactions[0].item_list.items[0].quantity+'", "'+paymentDetail.transactions[0].amount.total+'")', function (error, results, fields) {
               if (error) { 
                 res.end('error');
               } else {
-              res.render('payment.ejs', { data: JSON.stringify(payment) });            
+              res.render('index.ejs',{title: 'The Cakery', isLoggedIn: false });            
           }
         });
-        
-        console.log("Get Payment Response");
-          //console.log(JSON.stringify(payment));
-          //res.render('payment.ejs', { data: JSON.stringify(payment) });
+      
       }
   });
 })
@@ -213,11 +207,13 @@ app.get('/logout', function (req, res) {
 app.get('/summary', function (req, res) {
   ses = req.session;
   let data;
+  console.log('sesssion', ses)
   if (ses.email) {
   connection.query('SELECT * FROM `summary` WHERE email  = "'+ ses.email +'"', function (error, results, fields) {
       if (error) { 
         res.end('error');
       } else { 
+        console.log('summary',results);
         res.render('summary.ejs', { title: 'Summary', isLoggedIn: true, data: results });
       }
     });
@@ -270,6 +266,16 @@ app.get('/find_us', function (req, res) {
     res.render('findus.ejs', { title: 'Find Us Here', isLoggedIn: false });
   }
 });
+
+app.get('/faq', function (req, res) {
+  ses = req.session;
+  if (ses.email) {
+    res.render('faq.ejs', { title: 'FAQ', isLoggedIn: false });
+  } else {
+    res.render('faq.ejs', { title: 'FAQ', isLoggedIn: true });
+  }
+});
+
 
 app.post('/submitfeedback', function (req, res) {
   console.log(req.body.name);
